@@ -2,7 +2,7 @@ import React from 'react'
 import styled  from 'styled-components'
 import img from '../assets/myImg.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap, faBirthdayCake, faUser, faBriefcase, faBook, faGamepad, faApple } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap, faBirthdayCake, faUser, faBriefcase, faBook, faGamepad } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 const Layout = styled.div`
@@ -21,6 +21,8 @@ const Layout = styled.div`
   height: 100%;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
+  padding: 10px;
 `
 
 const ImageLayout = styled.div`
@@ -37,27 +39,47 @@ const NameLayout = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
 `
 
-const Name = styled.h1``
+const Name = styled.h1`
+  @media (max-width: 375px) {
+    margin: 0;
+  }
+`
 
 const NickName = styled.span`
   margin-left: 8px;
   font-size: 28px;
+  @media (max-width: 375px) {
+    margin-bottom: 10px;
+  }
 `
 
 const ContentLayout = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
+  @media (max-width: 375px) {
+    flex-direction: column;
+    padding: 0;
+  }
 `
 
 const LeftSide = styled.div`
   width: 49%;
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `
 
 const RightSide = styled.div`
   width: 49%;
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `
 
 const WhiteBox = styled.div`
@@ -66,6 +88,9 @@ const WhiteBox = styled.div`
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 5px;
+  @media (max-width: 375px) {
+    border-radius: 0;
+  }
 `
 
 const Icon = styled(FontAwesomeIcon)`
@@ -181,7 +206,7 @@ const Profile = () => {
         <RightSide>
           <WhiteBox>
             <Title>
-              Work Experience : ประวัติการทำงาน
+              Work Experience
             </Title>
             <DetailLayout>
               <Icon icon={faBriefcase} />
