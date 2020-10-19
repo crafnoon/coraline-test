@@ -110,6 +110,7 @@ const Text = styled.div`
   font-weight: 600;
   font-size: 16px;
   line-height: 1.2;
+  
 `
 
 const DetailLayout = styled.div`
@@ -140,9 +141,7 @@ const SignOut = styled(Link)`
   }
 `
 
-
 const Profile = () => {
- 
   return (
     <Layout>
       <ImageLayout>
@@ -187,7 +186,7 @@ const Profile = () => {
           </WhiteBox>
           <WhiteBox>
             <Title>
-              Hooby
+              Hobby
             </Title>
             <DetailLayout>
               <Icon icon={faGamepad} />
@@ -211,7 +210,7 @@ const Profile = () => {
             <DetailLayout>
               <Icon icon={faBriefcase} />
               <Text>
-                Software Development Endineer at Legal Drive Nov 2016 - Nov 2018
+                Software Development Engineer at Legal Drive Nov 2016 - Nov 2018
               </Text>
             </DetailLayout>
             <DetailLayout>
